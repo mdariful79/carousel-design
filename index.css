@@ -1,0 +1,120 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  flex-direction: column;
+}
+
+.carousel {
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+  margin: 50px auto 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 4px rgba(9, 142, 195, 0.845);
+  overflow: hidden;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.card.active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.card img {
+  width: 70%;
+  height: 200px;
+  object-fit: fill;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-content {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px 10px;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: grey;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+  background: black;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagination .active {
+  background: #e40707;
+}
+
+
+/* Footer styling */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  width: 100%;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
