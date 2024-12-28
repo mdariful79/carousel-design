@@ -5,11 +5,14 @@ const nextButton = document.getElementById('next');
 const paginationDots = document.querySelectorAll('.pagination span');
 
 let currentIndex = 0;
-const visibleCards = 1; 
+const visibleCards = 2; 
 
 
 const updateCarousel = () => {
-    const offset = currentIndex * -300; 
+
+    const cardWidth = cards[0].offsetWidth; 
+    const containerWidth = document.querySelector('.carousel').offsetWidth;
+    const offset = currentIndex * -cardWidth + (containerWidth - cardWidth) / 2; 
     track.style.transform = `translateX(${offset}px)`;
 
     cards.forEach((card, index) => {

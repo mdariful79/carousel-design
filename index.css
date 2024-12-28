@@ -33,6 +33,7 @@ body {
   overflow: hidden;
   text-align: center;
   opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease
 }
 
 .card.active {
@@ -91,7 +92,7 @@ body {
   width: 10px;
   height: 10px;
   margin: 5px;
-  background: #ccc;
+  background: #020312;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -114,7 +115,22 @@ footer {
 
 @media (max-width: 768px) {
   .card {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 150px;
+    max-width: 150px;
+  }
+
+  .card img {
+    height: 100px;
   }
 }
