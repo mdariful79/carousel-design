@@ -4,7 +4,7 @@ const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const paginationDots = document.querySelectorAll('.pagination span');
 
-let currentIndex = 0;
+let currentIndex = 2;
 const visibleCards = 2; 
 
 
